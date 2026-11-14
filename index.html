@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>إدارة النتائج</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main class="container py-5">
+      <section class="app-card mx-auto">
+        <header class="text-center mb-4">
+          <span class="badge text-bg-primary px-3 py-2 mb-3">نظام أكاديمي</span>
+          <h1 class="h2 fw-bold mb-2">إدارة النتائج</h1>
+          <p class="text-secondary mb-0">أضف نتائج الطلاب ثم فعّل لجنة الرأفة لإصدار التقرير.</p>
+        </header>
+
+        <form id="studentForm" novalidate>
+          <div class="row g-3">
+            <div class="col-12">
+              <label for="studentName" class="form-label">اسم الطالب</label>
+              <input id="studentName" class="form-control" type="text" placeholder="مثال: أحمد محمد" autocomplete="name">
+            </div>
+            <div class="col-md-4">
+              <label for="subjectOne" class="form-label">درجة المادة الأولى</label>
+              <input id="subjectOne" class="form-control" type="number" min="0" max="100" placeholder="من 100">
+            </div>
+            <div class="col-md-4">
+              <label for="subjectTwo" class="form-label">درجة المادة الثانية</label>
+              <input id="subjectTwo" class="form-control" type="number" min="0" max="100" placeholder="من 100">
+            </div>
+            <div class="col-md-4">
+              <label for="subjectThree" class="form-label">درجة المادة الثالثة</label>
+              <input id="subjectThree" class="form-control" type="number" min="0" max="100" placeholder="من 100">
+            </div>
+            <div class="col-md-6">
+              <label for="attendance" class="form-label">نسبة الحضور</label>
+              <input id="attendance" class="form-control" type="number" min="0" max="100" placeholder="من 100">
+            </div>
+            <div class="col-md-6 d-flex align-items-end">
+              <button id="addStudentBtn" class="btn btn-primary w-100 py-2" type="submit">إضافة طالب</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="errorBox" class="alert alert-danger mt-4 d-none" role="alert" aria-live="polite"></div>
+
+        <section class="mt-4" aria-labelledby="studentsHeading">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <h2 id="studentsHeading" class="h5 mb-0">الطلاب المضافون</h2>
+            <span id="studentsCount" class="badge text-bg-secondary">0 طالب</span>
+          </div>
+          <div id="studentsList" class="list-group empty-state">لم تتم إضافة أي طالب بعد.</div>
+        </section>
+
+        <button id="mercyCommitteeBtn" class="btn btn-outline-success w-100 mt-4 py-2" type="button">تفعيل لجنة الرأفة</button>
+
+        <section class="mt-4" aria-labelledby="reportHeading">
+          <h2 id="reportHeading" class="h5">التقرير النهائي للجنة الرأفة</h2>
+          <div id="reportBox" class="report-box" aria-live="polite">اضغط على الزر لعرض التقرير.</div>
+        </section>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

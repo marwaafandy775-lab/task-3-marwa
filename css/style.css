@@ -1,0 +1,38 @@
+:root {
+  --ink: #1f2937;
+  --soft: #f4f7fb;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  background: linear-gradient(135deg, #e9f2ff, var(--soft) 45%, #edf9f3);
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.app-card {
+  max-width: 780px;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background: rgba(255, 255, 255, .96);
+  border: 1px solid rgba(13, 110, 253, .1);
+  border-radius: 1.25rem;
+  box-shadow: 0 1rem 3rem rgba(31, 41, 55, .1);
+}
+
+.form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .15);
+}
+
+.empty-state, .report-box {
+  padding: 1rem;
+  color: #6c757d;
+  background: #f8f9fa;
+  border: 1px dashed #ced4da;
+  border-radius: .5rem;
+}
+
+.report-box .report-value {
+  color: #198754;
+  font-weight: 700;
+}
